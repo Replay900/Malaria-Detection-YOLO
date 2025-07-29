@@ -51,6 +51,3 @@ def predict():
     cv2.imwrite(result_path, image)
 
     return render_template("index.html", result_img=result_path)
-
-if __name__ == "__main__":
-    app.run(debug=True)
