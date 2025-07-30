@@ -33,7 +33,7 @@ def predict():
     imagefile.save(image_path)
 
     # Realizar predicción
-    results = model(image_path)[0]
+    results = model.predict(image_path, fuse=False)[0]
 
     # Leer imagen
     image = cv2.imread(image_path)
