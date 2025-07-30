@@ -7,7 +7,8 @@ import uuid
 app = Flask(__name__)
 
 # Cargar el modelo YOLOv11
-model = YOLO("model.pt", fuse=False)
+model = YOLO("model.pt")
+model.model.fuse = lambda *args, **kwargs: model.model
 # Clases
 CLASSES = ["trophozoite", "ring", "schizont", "gametocyte"]
 
